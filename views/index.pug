@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        link(href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet')
+        script(src='http://code.jquery.com/jquery-1.11.3.min.js')
+        script(src='main.js')
+    body
+        .container
+            h1 EMOJI ASCII ART!
+            .source-container
+                input.source(type='text' autofocus)
+
+            .picker
+                include picker.pug
+
+            .preview
+                button#copy-button(data-clipboard-text='Copy Me!') COPY TO CLIPBOARD
+                div
+                    pre.hint.invisible ❓
+                textarea.result(readonly rows='7' wrap='off')
+
+            .github
+                a(href='https://github.com/alavers/slack-banner')
+                    img.avatar(src='https://secure.gravatar.com/avatar/9bf06adf5949fbc6fef2d29403f976e8')
